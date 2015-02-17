@@ -19,6 +19,11 @@
 		1D134EE21A92CD9B005510B0 /* BurgerContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134EE11A92CD9B005510B0 /* BurgerContainerController.m */; };
 		1D134EE81A92CDFE005510B0 /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134EE71A92CDFE005510B0 /* MenuTableViewController.m */; };
 		1D134EEB1A92DF3F005510B0 /* WebOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134EEA1A92DF3F005510B0 /* WebOAuthViewController.m */; };
+		1D134EFA1A93DC5A005510B0 /* SearchQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134EF91A93DC5A005510B0 /* SearchQuestionViewController.m */; };
+		1D134EFD1A93DD33005510B0 /* QuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134EFC1A93DD33005510B0 /* QuestionCell.m */; };
+		1D134F001A93DFCC005510B0 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134EFF1A93DFCC005510B0 /* Question.m */; };
+		1D134F031A93E803005510B0 /* StackOverFlowService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134F021A93E803005510B0 /* StackOverFlowService.m */; };
+		1D134F061A93EB1A005510B0 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134F051A93EB1A005510B0 /* Constants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,16 @@
 		1D134EE71A92CDFE005510B0 /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
 		1D134EE91A92DF3F005510B0 /* WebOAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebOAuthViewController.h; sourceTree = "<group>"; };
 		1D134EEA1A92DF3F005510B0 /* WebOAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebOAuthViewController.m; sourceTree = "<group>"; };
+		1D134EF81A93DC5A005510B0 /* SearchQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchQuestionViewController.h; sourceTree = "<group>"; };
+		1D134EF91A93DC5A005510B0 /* SearchQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchQuestionViewController.m; sourceTree = "<group>"; };
+		1D134EFB1A93DD33005510B0 /* QuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionCell.h; sourceTree = "<group>"; };
+		1D134EFC1A93DD33005510B0 /* QuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionCell.m; sourceTree = "<group>"; };
+		1D134EFE1A93DFCC005510B0 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		1D134EFF1A93DFCC005510B0 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		1D134F011A93E803005510B0 /* StackOverFlowService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackOverFlowService.h; sourceTree = "<group>"; };
+		1D134F021A93E803005510B0 /* StackOverFlowService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackOverFlowService.m; sourceTree = "<group>"; };
+		1D134F041A93EB1A005510B0 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		1D134F051A93EB1A005510B0 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +158,10 @@
 				1D134EE71A92CDFE005510B0 /* MenuTableViewController.m */,
 				1D134EE91A92DF3F005510B0 /* WebOAuthViewController.h */,
 				1D134EEA1A92DF3F005510B0 /* WebOAuthViewController.m */,
+				1D134EF81A93DC5A005510B0 /* SearchQuestionViewController.h */,
+				1D134EF91A93DC5A005510B0 /* SearchQuestionViewController.m */,
+				1D134F011A93E803005510B0 /* StackOverFlowService.h */,
+				1D134F021A93E803005510B0 /* StackOverFlowService.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -152,6 +171,8 @@
 			children = (
 				1D134EBB1A92BF1D005510B0 /* LaunchScreen.xib */,
 				1D134EB61A92BF1D005510B0 /* Main.storyboard */,
+				1D134EFB1A93DD33005510B0 /* QuestionCell.h */,
+				1D134EFC1A93DD33005510B0 /* QuestionCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -160,6 +181,10 @@
 			isa = PBXGroup;
 			children = (
 				1D134EB01A92BF1D005510B0 /* StacksApp.xcdatamodeld */,
+				1D134EFE1A93DFCC005510B0 /* Question.h */,
+				1D134EFF1A93DFCC005510B0 /* Question.m */,
+				1D134F041A93EB1A005510B0 /* Constants.h */,
+				1D134F051A93EB1A005510B0 /* Constants.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -268,10 +293,15 @@
 				1D134EEB1A92DF3F005510B0 /* WebOAuthViewController.m in Sources */,
 				1D134EE21A92CD9B005510B0 /* BurgerContainerController.m in Sources */,
 				1D134EAF1A92BF1D005510B0 /* AppDelegate.m in Sources */,
+				1D134F031A93E803005510B0 /* StackOverFlowService.m in Sources */,
 				1D134EB21A92BF1D005510B0 /* StacksApp.xcdatamodeld in Sources */,
 				1D134EB51A92BF1D005510B0 /* ViewController.m in Sources */,
 				1D134EE81A92CDFE005510B0 /* MenuTableViewController.m in Sources */,
+				1D134EFA1A93DC5A005510B0 /* SearchQuestionViewController.m in Sources */,
+				1D134F001A93DFCC005510B0 /* Question.m in Sources */,
 				1D134EAC1A92BF1D005510B0 /* main.m in Sources */,
+				1D134EFD1A93DD33005510B0 /* QuestionCell.m in Sources */,
+				1D134F061A93EB1A005510B0 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
