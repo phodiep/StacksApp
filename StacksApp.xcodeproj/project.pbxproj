@@ -18,6 +18,7 @@
 		1D134ED61A92C02E005510B0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1D134ED51A92C02E005510B0 /* .gitignore */; };
 		1D134EE21A92CD9B005510B0 /* BurgerContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134EE11A92CD9B005510B0 /* BurgerContainerController.m */; };
 		1D134EE81A92CDFE005510B0 /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134EE71A92CDFE005510B0 /* MenuTableViewController.m */; };
+		1D134EEB1A92DF3F005510B0 /* WebOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134EEA1A92DF3F005510B0 /* WebOAuthViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		1D134EE11A92CD9B005510B0 /* BurgerContainerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BurgerContainerController.m; sourceTree = "<group>"; };
 		1D134EE61A92CDFE005510B0 /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
 		1D134EE71A92CDFE005510B0 /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
+		1D134EE91A92DF3F005510B0 /* WebOAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebOAuthViewController.h; sourceTree = "<group>"; };
+		1D134EEA1A92DF3F005510B0 /* WebOAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebOAuthViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,8 @@
 				1D134EE11A92CD9B005510B0 /* BurgerContainerController.m */,
 				1D134EE61A92CDFE005510B0 /* MenuTableViewController.h */,
 				1D134EE71A92CDFE005510B0 /* MenuTableViewController.m */,
+				1D134EE91A92DF3F005510B0 /* WebOAuthViewController.h */,
+				1D134EEA1A92DF3F005510B0 /* WebOAuthViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -260,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D134EEB1A92DF3F005510B0 /* WebOAuthViewController.m in Sources */,
 				1D134EE21A92CD9B005510B0 /* BurgerContainerController.m in Sources */,
 				1D134EAF1A92BF1D005510B0 /* AppDelegate.m in Sources */,
 				1D134EB21A92BF1D005510B0 /* StacksApp.xcdatamodeld in Sources */,
