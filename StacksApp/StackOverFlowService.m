@@ -78,7 +78,17 @@ NSString *const endPointUrl = @"https://api.stackexchange.com/2.2/";
     [dataTask resume];
 }
 
-
+-(void)fetchAvatarImage:(NSString *)avatarUrl completionHandler:(void (^)(UIImage *))completionHandler {
+    dispatch_queue_t imageQueue = dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0);
+    dispatch_async(imageQueue, ^{
+        NSURL *url = [NSURL URLWithString:avatarUrl];
+        NSData *data = [[NSData alloc] initWithContentsOfURL:url];
+        UIImage *image = [UIImage imageWithData:data];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completionHandler(image);
+        });
+    });
+}
 
 
 @end

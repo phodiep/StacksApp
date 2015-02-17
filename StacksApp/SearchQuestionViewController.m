@@ -48,7 +48,9 @@
     cell.text.text = question.title;
     cell.imageView.backgroundColor = [UIColor redColor];
     if (question.userAvatar == nil) {
-        //get image from url
+        [[StackOverFlowService sharedService] fetchAvatarImage:question.userAvatarUrl completionHandler:^(UIImage *image) {
+            question.userAvatar = image;
+        }];
     }
     cell.avatarImageView.image = question.userAvatar;
     
@@ -59,7 +61,6 @@
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     
     [[StackOverFlowService sharedService] fetchQuestionsWithSearchTerm:searchBar.text completionHandler:^(NSArray *results, NSString *error) {
-        NSLog(@"search");
         self.questions = results;
         
         if (error != nil) {
