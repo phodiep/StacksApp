@@ -45,8 +45,8 @@
     QuestionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"QUESTION_CELL" forIndexPath:indexPath];
     
     Question *question = self.questions[indexPath.row];
+    cell.avatarImageView.image = nil;
     cell.text.text = question.title;
-    cell.imageView.backgroundColor = [UIColor redColor];
     if (question.userAvatar == nil) {
         [[StackOverFlowService sharedService] fetchAvatarImage:question.userAvatarUrl completionHandler:^(UIImage *image) {
             question.userAvatar = image;

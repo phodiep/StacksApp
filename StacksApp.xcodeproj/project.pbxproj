@@ -24,6 +24,8 @@
 		1D134F001A93DFCC005510B0 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134EFF1A93DFCC005510B0 /* Question.m */; };
 		1D134F031A93E803005510B0 /* StackOverFlowService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134F021A93E803005510B0 /* StackOverFlowService.m */; };
 		1D134F061A93EB1A005510B0 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134F051A93EB1A005510B0 /* Constants.m */; };
+		1D134F091A952860005510B0 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134F081A952860005510B0 /* ProfileViewController.m */; };
+		1D134F0D1A954BEA005510B0 /* MyQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134F0C1A954BEA005510B0 /* MyQuestionsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,11 @@
 		1D134F021A93E803005510B0 /* StackOverFlowService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackOverFlowService.m; sourceTree = "<group>"; };
 		1D134F041A93EB1A005510B0 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		1D134F051A93EB1A005510B0 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		1D134F071A952860005510B0 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		1D134F081A952860005510B0 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		1D134F0A1A952DD1005510B0 /* MenuTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewDelegate.h; sourceTree = "<group>"; };
+		1D134F0B1A954BEA005510B0 /* MyQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionsViewController.h; sourceTree = "<group>"; };
+		1D134F0C1A954BEA005510B0 /* MyQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +161,7 @@
 				1D134EB41A92BF1D005510B0 /* ViewController.m */,
 				1D134EE01A92CD9B005510B0 /* BurgerContainerController.h */,
 				1D134EE11A92CD9B005510B0 /* BurgerContainerController.m */,
+				1D134F0A1A952DD1005510B0 /* MenuTableViewDelegate.h */,
 				1D134EE61A92CDFE005510B0 /* MenuTableViewController.h */,
 				1D134EE71A92CDFE005510B0 /* MenuTableViewController.m */,
 				1D134EE91A92DF3F005510B0 /* WebOAuthViewController.h */,
@@ -162,6 +170,10 @@
 				1D134EF91A93DC5A005510B0 /* SearchQuestionViewController.m */,
 				1D134F011A93E803005510B0 /* StackOverFlowService.h */,
 				1D134F021A93E803005510B0 /* StackOverFlowService.m */,
+				1D134F071A952860005510B0 /* ProfileViewController.h */,
+				1D134F081A952860005510B0 /* ProfileViewController.m */,
+				1D134F0B1A954BEA005510B0 /* MyQuestionsViewController.h */,
+				1D134F0C1A954BEA005510B0 /* MyQuestionsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -296,9 +308,11 @@
 				1D134F031A93E803005510B0 /* StackOverFlowService.m in Sources */,
 				1D134EB21A92BF1D005510B0 /* StacksApp.xcdatamodeld in Sources */,
 				1D134EB51A92BF1D005510B0 /* ViewController.m in Sources */,
+				1D134F0D1A954BEA005510B0 /* MyQuestionsViewController.m in Sources */,
 				1D134EE81A92CDFE005510B0 /* MenuTableViewController.m in Sources */,
 				1D134EFA1A93DC5A005510B0 /* SearchQuestionViewController.m in Sources */,
 				1D134F001A93DFCC005510B0 /* Question.m in Sources */,
+				1D134F091A952860005510B0 /* ProfileViewController.m in Sources */,
 				1D134EAC1A92BF1D005510B0 /* main.m in Sources */,
 				1D134EFD1A93DD33005510B0 /* QuestionCell.m in Sources */,
 				1D134F061A93EB1A005510B0 /* Constants.m in Sources */,
