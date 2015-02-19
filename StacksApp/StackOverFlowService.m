@@ -9,6 +9,7 @@
 #import "StackOverFlowService.h"
 #import "Constants.h"
 #import "Question.h"
+#import "User.h"
 
 @implementation StackOverFlowService
 
@@ -22,6 +23,64 @@ NSString *const endPointUrl = @"https://api.stackexchange.com/2.2/";
         sharedService = [[StackOverFlowService alloc] init];
     });
     return sharedService;
+}
+
+-(void)fetchUserProfile:(void (^)(User *results, NSString *error))completionHandler {
+    
+    NSString *urlString = endPointUrl;
+
+    urlString = [urlString stringByAppendingString:@"me?order=desc&sort=reputation&site=stackoverflow"];
+
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *token = [defaults objectForKey:@"token"];
+    if (token != nil) {
+        urlString = [urlString stringByAppendingString:[NSString stringWithFormat:@"&access_token=%@", token]];
+        urlString = [urlString stringByAppendingString:[NSString stringWithFormat:@"&key=%@", kApiKey]];
+    }
+
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    request.HTTPMethod = @"GET";
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    
+    NSURLSessionTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (error != nil) {
+            NSLog(@"%@", error.localizedDescription);
+            completionHandler(nil, @"Unable to connect");
+        } else {
+            NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+            NSInteger statusCode = httpResponse.statusCode;
+            
+            switch (statusCode) {
+                case 200 ... 299: {
+                    //good
+                    NSLog(@"StatusCode: %ld", (long)statusCode);
+                    
+                    User *user = [User parseForUserInfo:data];
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        if (user != nil) {
+                            completionHandler(user, nil);
+                        } else {
+                            completionHandler(nil, @"Search couldn't be completed");
+                        }
+                    });
+                    
+                    break;
+                }
+                default:
+                    //bad
+                    NSLog(@"Bad ResponseCode: %ld", (long)statusCode);
+                    break;
+            }
+        }
+        
+        
+    }];
+    
+    [dataTask resume];
+    
 }
 
 -(void)fetchQuestionsWithSearchTerm:(NSString*)searchTerm

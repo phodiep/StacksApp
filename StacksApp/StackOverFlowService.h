@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
 
 @interface StackOverFlowService : NSObject
 
 +(id)sharedService;
+
+-(void)fetchUserProfile:(void (^)(User *results, NSString *error))completionHandler;
 
 -(void)fetchQuestionsWithSearchTerm:(NSString*)searchTerm completionHandler:(void (^)(NSArray *results, NSString *error))completionHandler;
 

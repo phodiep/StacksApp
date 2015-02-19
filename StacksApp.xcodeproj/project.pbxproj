@@ -24,8 +24,9 @@
 		1D134F001A93DFCC005510B0 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134EFF1A93DFCC005510B0 /* Question.m */; };
 		1D134F031A93E803005510B0 /* StackOverFlowService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134F021A93E803005510B0 /* StackOverFlowService.m */; };
 		1D134F061A93EB1A005510B0 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134F051A93EB1A005510B0 /* Constants.m */; };
-		1D134F091A952860005510B0 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134F081A952860005510B0 /* ProfileViewController.m */; };
+		1D134F091A952860005510B0 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134F081A952860005510B0 /* ProfileViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1D134F0D1A954BEA005510B0 /* MyQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134F0C1A954BEA005510B0 /* MyQuestionsViewController.m */; };
+		1D134F131A9557B3005510B0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134F121A9557B3005510B0 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		1D134F0A1A952DD1005510B0 /* MenuTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewDelegate.h; sourceTree = "<group>"; };
 		1D134F0B1A954BEA005510B0 /* MyQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionsViewController.h; sourceTree = "<group>"; };
 		1D134F0C1A954BEA005510B0 /* MyQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsViewController.m; sourceTree = "<group>"; };
+		1D134F111A9557B3005510B0 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		1D134F121A9557B3005510B0 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,11 +195,13 @@
 		1D134ED41A92BFE7005510B0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1D134EB01A92BF1D005510B0 /* StacksApp.xcdatamodeld */,
-				1D134EFE1A93DFCC005510B0 /* Question.h */,
-				1D134EFF1A93DFCC005510B0 /* Question.m */,
 				1D134F041A93EB1A005510B0 /* Constants.h */,
 				1D134F051A93EB1A005510B0 /* Constants.m */,
+				1D134EFE1A93DFCC005510B0 /* Question.h */,
+				1D134EFF1A93DFCC005510B0 /* Question.m */,
+				1D134EB01A92BF1D005510B0 /* StacksApp.xcdatamodeld */,
+				1D134F111A9557B3005510B0 /* User.h */,
+				1D134F121A9557B3005510B0 /* User.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 				1D134EAF1A92BF1D005510B0 /* AppDelegate.m in Sources */,
 				1D134F031A93E803005510B0 /* StackOverFlowService.m in Sources */,
 				1D134EB21A92BF1D005510B0 /* StacksApp.xcdatamodeld in Sources */,
+				1D134F131A9557B3005510B0 /* User.m in Sources */,
 				1D134EB51A92BF1D005510B0 /* ViewController.m in Sources */,
 				1D134F0D1A954BEA005510B0 /* MyQuestionsViewController.m in Sources */,
 				1D134EE81A92CDFE005510B0 /* MenuTableViewController.m in Sources */,
