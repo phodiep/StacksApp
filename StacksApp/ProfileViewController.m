@@ -26,6 +26,8 @@
 
 @end
 
+//---------ARC disabled for this file ----------
+
 #pragma mark - Implementation
 @implementation ProfileViewController
 

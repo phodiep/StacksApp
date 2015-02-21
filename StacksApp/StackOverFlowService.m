@@ -54,9 +54,6 @@ NSString *const endPointUrl = @"https://api.stackexchange.com/2.2/";
             
             switch (statusCode) {
                 case 200 ... 299: {
-                    //good
-                    NSLog(@"StatusCode: %ld", (long)statusCode);
-                    
                     User *user = [User parseForUserInfo:data];
                     
                     dispatch_async(dispatch_get_main_queue(), ^{
@@ -70,7 +67,6 @@ NSString *const endPointUrl = @"https://api.stackexchange.com/2.2/";
                     break;
                 }
                 default:
-                    //bad
                     NSLog(@"Bad ResponseCode: %ld", (long)statusCode);
                     break;
             }
@@ -111,8 +107,6 @@ NSString *const endPointUrl = @"https://api.stackexchange.com/2.2/";
             
             switch (statusCode) {
                 case 200 ... 299: {
-                    NSLog(@"StatusCode: %ld", (long)statusCode);
-                    
                     NSArray *results = [Question parseForQuestions:data];
                     
                     dispatch_async(dispatch_get_main_queue(), ^{
