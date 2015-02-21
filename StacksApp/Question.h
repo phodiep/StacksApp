@@ -10,9 +10,11 @@
 
 @interface Question : NSObject
 
+@property (strong, nonatomic) NSString *id;
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *userAvatarUrl;
 @property (strong, nonatomic) UIImage *userAvatar;
+@property (strong, nonatomic) NSString *link;
 
 + (NSArray*)parseForQuestions:(NSData*)jsonData;
 

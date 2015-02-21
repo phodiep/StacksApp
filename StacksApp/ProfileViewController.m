@@ -38,15 +38,15 @@
         } else {
             self.user = results;
             
-            self.accountlabel.text = [NSString stringWithFormat:@"Account ID: %@", self.user.accountId ];
-            self.userTypeLabel.text = [NSString stringWithFormat:@"User Type: %@", self.user.userType ];
-            self.userUrlLabel.text = [NSString stringWithFormat:@"User URL: %@", self.user.userUrl ];
-            self.nameLabel.text = [NSString stringWithFormat:@"User Name: %@", self.user.name ];
-            self.userIdLabel.text = [NSString stringWithFormat:@"User ID: %@", self.user.userId ];
+            self.accountlabel.text = [NSString stringWithFormat:@"%@", self.user.accountId ];
+            self.userTypeLabel.text = [NSString stringWithFormat:@"%@", self.user.userType ];
+            self.userUrlLabel.text = [NSString stringWithFormat:@"%@", self.user.userUrl ];
+            self.nameLabel.text = [NSString stringWithFormat:@"%@", self.user.name ];
+            self.userIdLabel.text = [NSString stringWithFormat:@"%@", self.user.userId ];
             
-            self.lastAccessLabel.text = [NSString stringWithFormat:@"Last Accessed: %@",
+            self.lastAccessLabel.text = [NSString stringWithFormat:@"%@",
                                          [self convertEpochToShortDate:self.user.lastAccessDate] ];
-            self.creationLabel.text = [NSString stringWithFormat:@"Account Created: %@",
+            self.creationLabel.text = [NSString stringWithFormat:@"%@",
                                        [self convertEpochToShortDate:self.user.creationDate] ];
 
             if (self.user.userAvatar == nil) {

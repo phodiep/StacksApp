@@ -31,6 +31,8 @@
         Question *question = [[Question alloc] init];
         
         question.title = item[@"title"];
+        question.id = item[@"question_id"];
+        question.link = item[@"link"];
         NSDictionary *ownerDictionary = item[@"owner"];
         question.userAvatarUrl = ownerDictionary[@"profile_image"];
 

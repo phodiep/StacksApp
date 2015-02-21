@@ -10,6 +10,7 @@
 #import "QuestionCell.h"
 #import "Question.h"
 #import "StackOverFlowService.h"
+#import "AnswerWebViewController.h"
 
 #pragma mark - Interface
 @interface SearchQuestionViewController () <UITableViewDataSource, UISearchBarDelegate>
@@ -42,7 +43,7 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    QuestionCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"QUESTION_CELL" forIndexPath:indexPath];
+    QuestionCell *cell = (QuestionCell*)[self.tableView dequeueReusableCellWithIdentifier:@"QUESTION_CELL" forIndexPath:indexPath];
     
     Question *question = self.questions[indexPath.row];
     cell.avatarImageView.image = nil;
@@ -50,16 +51,20 @@
     if (question.userAvatar == nil) {
         [[StackOverFlowService sharedService] fetchAvatarImage:question.userAvatarUrl completionHandler:^(UIImage *image) {
             question.userAvatar = image;
+            cell.avatarImageView.image = question.userAvatar;
         }];
+    } else {
+        cell.avatarImageView.image = question.userAvatar;
     }
-    cell.avatarImageView.image = question.userAvatar;
     
     return cell;
 }
 
+
 #pragma mark - UISearchBarDelegate
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     
+    [searchBar resignFirstResponder];
     [[StackOverFlowService sharedService] fetchQuestionsWithSearchTerm:searchBar.text completionHandler:^(NSArray *results, NSString *error) {
         self.questions = results;
         
@@ -68,6 +73,38 @@
         }
         [self.tableView reloadData];
     }];
+}
+
+-(BOOL)searchBar:(UISearchBar *)searchBar shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    return [self validateString:text];
+}
+
+-(BOOL)validateString:(NSString*)string{
+    NSRegularExpression *regex = [[NSRegularExpression alloc] initWithPattern:@"[^A-Za-z0-9\n-]" options:0 error:nil];
+    NSInteger elements = [string length];
+    NSRange range = NSMakeRange(0, elements);
+    
+    NSInteger matches = [regex numberOfMatchesInString:string options:0 range:range];
+    
+    if (matches > 0) {
+        return false;
+    }
+    return true;
+    
+}
+
+
+#pragma mark - Segue
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier  isEqual: @"SEGUE_ANSWERS"]) {
+        AnswerWebViewController *answerVC = (AnswerWebViewController*)segue.destinationViewController;
+
+        NSIndexPath *selectedIndex = [self.tableView indexPathForSelectedRow];
+        Question *selectedQuestion = (Question*)self.questions[selectedIndex.row];
+        
+        answerVC.link = selectedQuestion.link;
+
+    }
 }
 
 @end

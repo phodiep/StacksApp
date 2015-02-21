@@ -111,7 +111,6 @@ NSString *const endPointUrl = @"https://api.stackexchange.com/2.2/";
             
             switch (statusCode) {
                 case 200 ... 299: {
-                    //good
                     NSLog(@"StatusCode: %ld", (long)statusCode);
                     
                     NSArray *results = [Question parseForQuestions:data];
@@ -127,7 +126,6 @@ NSString *const endPointUrl = @"https://api.stackexchange.com/2.2/";
                     break;
                 }
                 default:
-                    //bad
                     NSLog(@"Bad ResponseCode: %ld", (long)statusCode);
                     break;
             }
