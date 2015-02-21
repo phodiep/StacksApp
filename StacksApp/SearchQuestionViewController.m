@@ -31,6 +31,13 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
 
     self.searchBar.delegate = self;
+
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];   //update cell size
     
 }
 

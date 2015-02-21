@@ -10,7 +10,6 @@
 		1D134EAC1A92BF1D005510B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134EAB1A92BF1D005510B0 /* main.m */; };
 		1D134EAF1A92BF1D005510B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134EAE1A92BF1D005510B0 /* AppDelegate.m */; };
 		1D134EB21A92BF1D005510B0 /* StacksApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1D134EB01A92BF1D005510B0 /* StacksApp.xcdatamodeld */; };
-		1D134EB51A92BF1D005510B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D134EB41A92BF1D005510B0 /* ViewController.m */; };
 		1D134EB81A92BF1D005510B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D134EB61A92BF1D005510B0 /* Main.storyboard */; };
 		1D134EBA1A92BF1D005510B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D134EB91A92BF1D005510B0 /* Images.xcassets */; };
 		1D134EBD1A92BF1D005510B0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D134EBB1A92BF1D005510B0 /* LaunchScreen.xib */; };
@@ -47,8 +46,6 @@
 		1D134EAD1A92BF1D005510B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D134EAE1A92BF1D005510B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1D134EB11A92BF1D005510B0 /* StacksApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StacksApp.xcdatamodel; sourceTree = "<group>"; };
-		1D134EB31A92BF1D005510B0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1D134EB41A92BF1D005510B0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1D134EB71A92BF1D005510B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1D134EB91A92BF1D005510B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1D134EBC1A92BF1D005510B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -163,8 +160,6 @@
 		1D134ED21A92BFD5005510B0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1D134EB31A92BF1D005510B0 /* ViewController.h */,
-				1D134EB41A92BF1D005510B0 /* ViewController.m */,
 				1D134EE01A92CD9B005510B0 /* BurgerContainerController.h */,
 				1D134EE11A92CD9B005510B0 /* BurgerContainerController.m */,
 				1D134F0A1A952DD1005510B0 /* MenuTableViewDelegate.h */,
@@ -318,7 +313,6 @@
 				1D134F031A93E803005510B0 /* StackOverFlowService.m in Sources */,
 				1D134EB21A92BF1D005510B0 /* StacksApp.xcdatamodeld in Sources */,
 				1D134F131A9557B3005510B0 /* User.m in Sources */,
-				1D134EB51A92BF1D005510B0 /* ViewController.m in Sources */,
 				1D134F0D1A954BEA005510B0 /* MyQuestionsViewController.m in Sources */,
 				1D134EE81A92CDFE005510B0 /* MenuTableViewController.m in Sources */,
 				1D6266751A991B8D00882D81 /* AnswerWebViewController.m in Sources */,

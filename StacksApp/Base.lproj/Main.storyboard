@@ -156,6 +156,9 @@
                                                 <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="4jB-V5-nHw" secondAttribute="bottom" id="f0x-WE-zyI"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                         <connections>
                                             <outlet property="avatarImageView" destination="4jB-V5-nHw" id="af3-Bq-SQ4"/>
                                             <outlet property="text" destination="qva-Be-GSO" id="CkT-Yi-80G"/>
